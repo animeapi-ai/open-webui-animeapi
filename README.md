@@ -37,7 +37,7 @@ IMAGE_SIZE=1024x1024
 
 Open WebUI downloads each image into its own storage, so pictures stay in your chats.
 
-Mature output: this path uses the API's own default for mature output on the anime model. To have it off, use the tool below, where it is off by default.
+AnimeAPI does not generate adult content. Explicit prompts are refused and not charged.
 
 ## B. The AnimeAPI tool
 
@@ -55,7 +55,6 @@ Settings (Valves):
 | --- | --- | --- |
 | Api Key | empty | Your `ank_...` key. |
 | Default Model | `anime` | `anime` $0.003, `ultra` $0.01, `ultra-max` $0.02 per image. The chat model may pick another when asked. |
-| Allow Nsfw | **off** | Mature output is off by default in this tool, because chat output is often shared. |
 | Enhance Prompt | on | Rewrites plain English into tags for the anime model. |
 | Keep Image In Chat | on | Stores the image in the chat. AnimeAPI image links are not permanent storage; with this off the chat only keeps the link. |
 | Base Url | `https://animeapi.ai` | Leave as is. |

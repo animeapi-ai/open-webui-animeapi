@@ -6,7 +6,7 @@ git_url: https://github.com/animeapi-ai/open-webui-animeapi
 description: Generate anime images in chat with AnimeAPI at $0.003 per image. The model calls this tool when you ask for an anime picture; the image appears in the reply.
 required_open_webui_version: 0.5.0
 requirements: requests
-version: 1.0.0
+version: 1.0.1
 licence: MIT
 """
 
@@ -30,10 +30,6 @@ class Tools:
         default_model: Literal["anime", "ultra", "ultra-max"] = Field(
             default="anime",
             description="Model used when the chat model does not pick one. anime $0.003, ultra $0.01, ultra-max $0.02 per image.",
-        )
-        allow_nsfw: bool = Field(
-            default=False,
-            description="Allow mature output. Off by default because chat output is often shared.",
         )
         enhance_prompt: bool = Field(
             default=True,
@@ -110,7 +106,6 @@ class Tools:
             "model": model,
             "orientation": orientation,
             "enhance": self.valves.enhance_prompt,
-            "allowNSFW": self.valves.allow_nsfw,
         }
         headers = {"Authorization": f"Bearer {self.valves.api_key}", "User-Agent": "animeapi-open-webui/1.0"}
         last = AnimeAPIError("Unknown error", "UNKNOWN")
