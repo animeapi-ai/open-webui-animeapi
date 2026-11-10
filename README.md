@@ -37,7 +37,7 @@ IMAGE_SIZE=1024x1024
 
 Open WebUI downloads each image into its own storage, so pictures stay in your chats.
 
-Mature output: this path uses the API's own default for mature output on the anime model. To turn it off for everyone, add `{"allow_nsfw": false}` under **Additional Parameters** on the same settings page (Open WebUI 0.6.30 and later), or use the tool below, where it is off by default.
+Mature output: this path uses the API's own default for mature output on the anime model. To have it off, use the tool below, where it is off by default.
 
 ## B. The AnimeAPI tool
 
